@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quick Quiz</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="app__header">
+      <h1>Quick Quiz</h1>
+    </header>
+
+    <section id="quiz" class="card" aria-live="polite">
+      <div class="card__body">
+        <div class="meta">
+          <span id="progress">Question 1 of 5</span>
+          <span id="score">Score: 0</span>
+        </div>
+        <h2 id="question">Question text</h2>
+        <div id="options" class="options" role="group" aria-labelledby="question">
+          <!-- option buttons injected by JS -->
+        </div>
+      </div>
+      <div class="card__footer">
+        <button id="next-btn" class="btn" disabled>Next</button>
+      </div>
+    </section>
+
+    <section id="result" class="card is-hidden" aria-live="polite">
+      <div class="card__body">
+        <h2>All done! 🎉</h2>
+        <p id="final-message"></p>
+      </div>
+      <div class="card__footer">
+        <button id="restart-btn" class="btn">Restart</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
